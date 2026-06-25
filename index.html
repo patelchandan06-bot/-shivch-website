@@ -1,41 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHIVCH Bespoke</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivch —  Tailored to Perfection</title>
+  <meta name="description" content="Experience the art of bespoke tailoring. Made to Measure shirts and suits for the modern gentleman." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-<header class="navbar">
-<div class="logo"><h2>SHIVCH</h2><span>BESPOKE</span></div>
-<nav>
-<a href="#">Home</a><a href="#">MTM</a><a href="#">Shirts</a><a href="#">Suits</a>
-<a href="#">Fabrics</a><a href="#">About</a><a href="#">Contact</a>
-</nav>
-<a href="https://wa.me/917856965582" class="nav-btn">Book Appointment</a>
-</header>
-<section class="hero">
-<div class="hero-left">
-<div class="small-line"><span></span>TAILORED TO PERFECTION</div>
-<h1>You Dream.<br>We Tailor.</h1>
-<p>Experience the art of bespoke tailoring.<br>Made to Measure for the modern gentleman.</p>
-<div class="hero-buttons">
-<a href="#" class="gold-btn">Explore Collection</a>
-<a href="https://wa.me/917856965582" class="outline-btn">Book Appointment</a>
-</div>
-</div>
-<div class="hero-right">
-<img src="https://images.unsplash.com/photo-1593032465171-8bd0f2ef0d89?auto=format&fit=crop&w=1200&q=80">
-</div>
-</section>
-<section class="features">
-<div class="feature"><h3>Made To Measure</h3><p>Personalized fit crafted exclusively for you.</p></div>
-<div class="feature"><h3>Premium Fabrics</h3><p>Handpicked from leading mills worldwide.</p></div>
-<div class="feature"><h3>Expert Craftsmanship</h3><p>Precision tailoring by skilled artisans.</p></div>
-<div class="feature"><h3>Timeless Style</h3><p>Luxury garments designed to last.</p></div>
-</section>
-<script src="script.js"></script>
-</body></html>
+
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <header class="nav-header" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">SHIVCH</span>
+        <span class="logo-sub">BESPOKE</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">HOME</a>
+        <a href="pages/mtm.html" class="nav-link">MTM</a>
+        <a href="pages/shirts.html" class="nav-link">SHIRTS</a>
+        <a href="pages/suits.html" class="nav-link">SUITS</a>
+        <a href="pages/fabrics.html" class="nav-link">FABRICS</a>
+        <a href="pages/about.html" class="nav-link">ABOUT</a>
+        <a href="pages/contact.html" class="nav-link">CONTACT</a>
+      </nav>
+      <a href="pages/appointment.html" class="btn-book">BOOK APPOINTMENT</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Slide indicators left -->
+    <div class="hero-indicators">
+      <span class="indicator active" data-slide="0">01</span>
+      <span class="indicator" data-slide="1">02</span>
+      <span class="indicator" data-slide="2">03</span>
+    </div>
+
+    <!-- Slides -->
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: url('images/hero-1.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/hero-2.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/hero-3.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="eyebrow-line"></span> TAILORED TO PERFECTION</p>
+      <h1 class="hero-headline">
+        You Dream.<br />
+        <em>We Tailor.</em>
+      </h1>
+      <p class="hero-sub">
+        Experience the art of bespoke tailoring.<br />
+        Made to Measure for the modern gentleman.
+      </p>
+      <div class="hero-actions">
+        <a href="pages/shirts.html" class="btn-primary">EXPLORE COLLECTION &nbsp;→</a>
+        <a href="pages/appointment.html" class="btn-outline">BOOK APPOINTMENT</a>
+      </div>
+    </div>
+
+    <!-- Slide controls right -->
+    <div class="hero-nav">
+      <button class="hero-nav-btn" id="slideNext" aria-label="Next slide">→</button>
+      <button class="hero-nav-btn" id="slidePrev" aria-label="Previous slide">←</button>
+    </div>
+
+    <!-- Watch film -->
+    <div class="hero-film">
+      <button class="film-btn" id="watchFilm" aria-label="Watch the film">
+        <span class="film-icon">▶</span>
+      </button>
+      <span class="film-label">WATCH THE FILM</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FEATURE BAR ═══════════════════ -->
+  <section class="feature-bar">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 36L36 12M12 12l24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <div class="feature-text">
+        <h3>MADE TO MEASURE</h3>
+        <p>Personalized fit crafted just for you.</p>
+      </div>
+    </div>
+    <div class="feature-divider"></div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="8" width="28" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M18 8v32M30 8v32" stroke="currentColor" stroke-width="1"/></svg>
+      </div>
+      <div class="feature-text">
+        <h3>PREMIUM FABRICS</h3>
+        <p>Handpicked from the finest mills.</p>
+      </div>
+    </div>
+    <div class="feature-divider"></div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 8l4 12h12l-9.7 7 3.7 12L24 31l-10 8 3.7-12L8 20h12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="feature-text">
+        <h3>EXPERT CRAFTSMANSHIP</h3>
+        <p>Precision tailoring by skilled artisans.</p>
+      </div>
+    </div>
+    <div class="feature-divider"></div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 10l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 38h32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="feature-text">
+        <h3>TIMELESS STYLE</h3>
+        <p>Classic designs for the modern man.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ MTM SECTION ═══════════════════ -->
+  <section class="mtm-section">
+    <div class="mtm-content">
+      <p class="section-eyebrow">MADE TO MEASURE</p>
+      <h2 class="section-title">Tailored Around You</h2>
+      <p class="section-body">From fabric to fit, every detail is customized to reflect your personality and style.</p>
+      <a href="pages/mtm.html" class="btn-primary">DISCOVER MTM &nbsp;→</a>
+    </div>
+    <div class="mtm-image">
+      <img src="images/mtm-suits.jpg" alt="Made to Measure bespoke suits" />
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROCESS SECTION ═══════════════════ -->
+  <section class="process-section">
+    <div class="process-header">
+      <p class="section-eyebrow">THE JOURNEY</p>
+      <h2 class="section-title">How We Craft Your Garment</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Consultation</h3>
+        <p>Meet our master tailors and discuss your vision, occasion, and personal style preferences.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>Fabric Selection</h3>
+        <p>Choose from our curated library of premium fabrics sourced from the world's finest mills.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Measurements</h3>
+        <p>Precise body measurements taken to ensure a perfect, flattering fit unique to you.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h3>Crafting</h3>
+        <p>Your garment is handcrafted by our skilled artisans with meticulous attention to every detail.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ COLLECTIONS GRID ═══════════════════ -->
+  <section class="collections-section">
+    <div class="collections-header">
+      <p class="section-eyebrow">OUR COLLECTIONS</p>
+      <h2 class="section-title">Crafted for Every Occasion</h2>
+    </div>
+    <div class="collections-grid">
+      <div class="collection-card large">
+        <img src="images/collection-shirts.jpg" alt="Bespoke Shirts" />
+        <div class="collection-overlay">
+          <span class="collection-label">SHIRTS</span>
+          <a href="pages/shirts.html" class="btn-outline-sm">EXPLORE →</a>
+        </div>
+      </div>
+      <div class="collection-card">
+        <img src="images/collection-suits.jpg" alt="Bespoke Suits" />
+        <div class="collection-overlay">
+          <span class="collection-label">SUITS</span>
+          <a href="pages/suits.html" class="btn-outline-sm">EXPLORE →</a>
+        </div>
+      </div>
+      <div class="collection-card">
+        <img src="images/collection-fabrics.jpg" alt="Premium Fabrics" />
+        <div class="collection-overlay">
+          <span class="collection-label">FABRICS</span>
+          <a href="pages/fabrics.html" class="btn-outline-sm">EXPLORE →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+  <section class="testimonials-section">
+    <div class="testimonials-inner">
+      <p class="section-eyebrow">CLIENT STORIES</p>
+      <h2 class="section-title">Words from Our Gentlemen</h2>
+      <div class="testimonials-track" id="testimonialTrack">
+        <div class="testimonial-card active">
+          <p class="testimonial-text">"The fit is unlike anything I've experienced from off-the-rack. Every stitch feels intentional. Shivch Bespoke has redefined what a shirt should feel like."</p>
+          <span class="testimonial-author">— Arjun Mehta, Mumbai</span>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I wore my Shivch suit to a board meeting and received more compliments than I could count. The attention to detail is extraordinary."</p>
+          <span class="testimonial-author">— Vikram Singh, Delhi</span>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"From the consultation to the final fitting, the experience was seamless. My wedding suit was absolutely perfect — exactly what I envisioned."</p>
+          <span class="testimonial-author">— Rohan Kapoor, Chandigarh</span>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots">
+        <button class="dot active" data-index="0"></button>
+        <button class="dot" data-index="1"></button>
+        <button class="dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <p class="section-eyebrow light">BEGIN YOUR JOURNEY</p>
+      <h2 class="cta-title">Book Your Private Consultation</h2>
+      <p class="cta-sub">Visit our atelier and let our master tailors craft your perfect garment.</p>
+      <a href="pages/appointment.html" class="btn-gold">BOOK APPOINTMENT &nbsp;→</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-main">SHIVCH</span>
+          <span class="logo-sub">BESPOKE</span>
+        </a>
+        <p class="footer-tagline">Tailored to Perfection</p>
+      </div>
+      <div class="footer-links">
+        <h4>Collections</h4>
+        <a href="pages/mtm.html">Made to Measure</a>
+        <a href="pages/shirts.html">Shirts</a>
+        <a href="pages/suits.html">Suits</a>
+        <a href="pages/fabrics.html">Fabrics</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/appointment.html">Book Appointment</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Visit Us</h4>
+        <p>Shivch Bespoke Atelier<br />Ludhiana, Punjab, India</p>
+        <p class="footer-email">contact@shivch.com</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shivch Bespoke. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917856965582" class="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-video-placeholder">
+        <p>Your brand film would play here.<br />Embed your YouTube or Vimeo link.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

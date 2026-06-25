@@ -1,0 +1,250 @@
+/* ═══════════════════════════════════════════════
+   SHIVCH BESPOKE — Pages Stylesheet (inner pages)
+═══════════════════════════════════════════════ */
+
+/* ── PAGE HERO OVERRIDE FOR INNER PAGES ── */
+.page-hero {
+  background: var(--dark);
+}
+.page-hero h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* ── ACTIVE NAV BUTTON ── */
+.btn-book.active-btn {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+
+/* ═══════════════════ BOOKING SECTION ═══════════════════ */
+.booking-section {
+  background: var(--off-white);
+  padding: 6rem 3rem;
+}
+
+.booking-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* Booking info */
+.booking-details {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.booking-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.detail-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--dark);
+}
+
+/* Booking form */
+.booking-form-wrapper {
+  position: sticky;
+  top: 96px;
+}
+
+.booking-form {
+  background: var(--white);
+  padding: 3rem;
+  border: 1px solid rgba(0,0,0,0.07);
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.form-group.full { grid-column: span 2; }
+
+.form-group label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--gray);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--off-white);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--dark);
+  outline: none;
+  transition: border-color var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: var(--white);
+}
+
+.form-group textarea { resize: vertical; min-height: 90px; }
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.btn-gold.full-width {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.form-note {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--gray);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ═══════════════════ SHIRTS / SUITS / FABRICS / MTM ═══════════════════ */
+.product-section {
+  background: var(--off-white);
+  padding: 6rem 3rem;
+}
+
+.product-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--white);
+  overflow: hidden;
+  transition: transform var(--transition);
+}
+.product-card:hover { transform: translateY(-4px); }
+
+.product-card-img {
+  height: 340px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.product-card-img img { transition: transform 0.6s ease; }
+.product-card:hover .product-card-img img { transform: scale(1.06); }
+
+.product-card-body {
+  padding: 1.5rem;
+}
+.product-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+.product-card-body p {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.product-card-link {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ═══════════════════ ABOUT / CONTACT PAGES ═══════════════════ */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.about-content {
+  padding: 6rem;
+  background: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-image { overflow: hidden; background: #1a1a1a; }
+
+.contact-section {
+  background: var(--off-white);
+  padding: 6rem 3rem;
+}
+.contact-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+/* ═══════════════════ RESPONSIVE ═══════════════════ */
+@media (max-width: 1024px) {
+  .booking-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .booking-form-wrapper { position: static; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-section { grid-template-columns: 1fr; }
+  .about-image { height: 400px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media (max-width: 640px) {
+  .booking-section { padding: 4rem 1.5rem; }
+  .booking-form { padding: 2rem 1.5rem; }
+  .product-section { padding: 4rem 1.5rem; }
+  .product-grid { grid-template-columns: 1fr; }
+  .about-content { padding: 3.5rem 1.5rem; }
+  .contact-section { padding: 4rem 1.5rem; }
+}
