@@ -1,111 +1,42 @@
-# Shivch Bespoke — Website
+# SHIVCH Bespoke — Website
 
-Premium bespoke tailoring website for Shivch Bespoke, Ludhiana.
+Static multi-page site built with plain HTML/CSS/JS (no build step, no dependencies) — ready to push straight to GitHub / GitHub Pages.
 
-## 📁 Project Structure
-
+## Structure
 ```
-shivch-bespoke/
-├── index.html              # Homepage
-├── css/
-│   ├── style.css           # Main stylesheet
-│   └── pages.css           # Inner pages stylesheet
-├── js/
-│   └── main.js             # Interactions & animations
-├── images/                 # Add your images here (see below)
-└── pages/
-    ├── appointment.html    # Book Appointment
-    ├── shirts.html         # Shirts collection
-    ├── suits.html          # Suits collection
-    ├── fabrics.html        # Fabrics
-    ├── mtm.html            # Made to Measure
-    ├── about.html          # About Us
-    └── contact.html        # Contact
+index.html        Homepage (hero, features, MTM intro)
+mtm.html           Placeholder inner page
+shirts.html        Placeholder inner page
+suits.html         Placeholder inner page
+fabrics.html       Placeholder inner page
+about.html         Placeholder inner page
+contact.html       Placeholder inner page
+css/style.css      All styling (colors/fonts as CSS variables at the top)
+js/script.js       Mobile nav toggle + hero slide controls
+images/            Put your photos here
 ```
 
-## 🖼️ Adding Your Images
+## Adding your photos
+Two spots on the homepage currently show dashed placeholder boxes:
+1. **Hero image** — save your suit/mannequin photo as `images/hero-suit.jpg`, then in `index.html` replace the `<div class="hero-image-placeholder">…</div>` block with:
+   ```html
+   <img src="images/hero-suit.jpg" alt="Bespoke tailored suit">
+   ```
+2. **MTM section image** — save as `images/mtm-suits.jpg` and replace `<div class="mtm-image-placeholder">…</div>` the same way.
 
-Place images in the `/images/` folder with these exact filenames:
+## Editing colors/fonts
+Open `css/style.css` — the `:root` block at the top has every color and font as a variable, so you can restyle the whole site from one place.
 
-| Filename                  | Used In              | Recommended Size    |
-|--------------------------|----------------------|---------------------|
-| `hero-1.jpg`             | Hero slide 1         | 1920×1080px        |
-| `hero-2.jpg`             | Hero slide 2         | 1920×1080px        |
-| `hero-3.jpg`             | Hero slide 3         | 1920×1080px        |
-| `mtm-suits.jpg`          | MTM section          | 900×600px          |
-| `collection-shirts.jpg`  | Shirts collection    | 800×600px          |
-| `collection-suits.jpg`   | Suits collection     | 800×600px          |
-| `collection-fabrics.jpg` | Fabrics collection   | 800×600px          |
+## WhatsApp button
+Update the phone number in the `wa.me/...` link (currently a placeholder) in every HTML file's floating WhatsApp button.
 
-> Images degrade gracefully — dark gradient placeholders are shown until images are added.
+## Deploying to GitHub Pages
+1. Create a new repo and push these files to the `main` branch.
+2. In the repo, go to **Settings → Pages**.
+3. Under "Source," choose `main` branch, `/ (root)` folder, and save.
+4. Your site will be live at `https://<username>.github.io/<repo-name>/`.
 
-## ✏️ Key Customisations
-
-### 1. WhatsApp Number
-Replace `91XXXXXXXXXX` with your actual number in all HTML files:
-```html
-<a href="https://wa.me/917856965582" ...>
-```
-
-### 2. Email Address
-Replace `contact@shivch.com` with your real email in all files.
-
-### 3. Address
-Update the atelier address in the footer and contact page.
-
-### 4. Brand Film / Video
-In `index.html`, find `.modal-video-placeholder` and replace with an iframe:
-```html
-<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" ...></iframe>
-```
-
-### 5. Appointment Form
-The form currently uses a browser alert for demo purposes.  
-To make it functional, connect it to:
-- **Formspree**: Replace the button handler with `<form action="https://formspree.io/f/YOUR_ID">`
-- **EmailJS**: Add EmailJS SDK and call from the submit handler in `appointment.html`
-- **Backend API**: POST the form data to your server
-
-## 🎨 Design Tokens (CSS Variables)
-
-All colors and fonts are in `css/style.css` under `:root`:
-
-```css
---gold:      #C9A96E   /* Primary accent */
---black:     #0D0D0D   /* Dark backgrounds */
---cream:     #F2EDE6   /* Light section backgrounds */
---font-display: 'Cormorant Garamond'  /* Headings */
---font-body:    'Montserrat'          /* Body text */
-```
-
-## 🌐 Deployment
-
-### GitHub Pages
-1. Push this repository to GitHub
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, `/ (root)`
-4. Your site will be live at `https://shivch.com`
-
-### Custom Domain
-A `CNAME` file is already included in the project root pointing to:
-```
-shivch.com
-```
-
-## 📱 Responsive
-- ✅ Desktop (1440px+)
-- ✅ Laptop (1024px)
-- ✅ Tablet (768px)
-- ✅ Mobile (375px+)
-
-## 🔧 Pages to Complete
-The following pages are scaffolded and need content added (follow the `shirts.html` pattern):
-- `pages/suits.html`
-- `pages/fabrics.html`
-- `pages/mtm.html`
-- `pages/about.html`
-- `pages/contact.html`
-
----
-
-© 2025 Shivch Bespoke. All rights reserved.
+## Notes
+- Fully responsive (mobile nav collapses to a hamburger menu below 860px).
+- No frameworks or build tools required — just static files.
+- Inner pages (MTM, Shirts, Suits, Fabrics, About, Contact) are simple placeholders so navigation doesn't break; flesh these out with real content next.
